@@ -1,0 +1,17 @@
+{
+  "reminders": {
+    "daysAhead": [1, 4],
+    "time": "13:00"
+  },
+  "meetup": {
+    "baseurl": "https://api.meetup.com",
+    "group": "",
+    "apikey": ""
+  },
+  "slack": {
+    "webhook": "",
+    "channel": "",
+    "username": "",
+    "icon_url": ""
+  }
+}
