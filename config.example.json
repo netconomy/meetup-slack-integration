@@ -1,7 +1,6 @@
 {
   "reminders": {
-    "daysAhead": [1, 4],
-    "time": "13:00"
+    "daysAhead": [1, 4]
   },
   "meetup": {
     "baseurl": "https://api.meetup.com",

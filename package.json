@@ -17,7 +17,7 @@
     "slack",
     "integration"
   ],
-  "author": "Stefan Mayer <s.mayer@netconomy.net>",
+  "author": "Netconomy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/netconomy/meetup-slack-integration/issues"
