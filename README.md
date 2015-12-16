@@ -12,7 +12,7 @@ Run `npm install` in the apps root directory.
 Create your own config.json. An example file is included in the project (`config.example.json`).
 
 The config options are the following:
-```JSON
+```JavaScript
 {
   "reminders": {
     "daysAhead": [1, 4] // days till the event starts. Supports multiple reminders (e.g. 1 day ahead and 4 days ahead).
