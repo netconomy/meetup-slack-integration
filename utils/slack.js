@@ -3,13 +3,10 @@
 const request = require('superagent');
 
 module.exports = {
-    sendReminder(slackConfig, message) {
-        const data = Object.assign({}, slackConfig, {
-            text: message,
-            webhook: null
-        });
+    sendReminder(config, message) {
+        const data = this.createSlackData(config, message);
         return new Promise((resolve, reject) => {
-            request.post(slackConfig.webhook)
+            request.post(config.webhook)
                 .send(data)
                 .end(function(err, res) {
                     if (err || !res.ok) {
@@ -19,5 +16,14 @@ module.exports = {
                     }
                 });
         });
+    },
+
+    createSlackData(config, message) {
+        return {
+            channel: config.channel,
+            username: config.username,
+            icon_url: config.iconUrl,
+            text: message
+        };
     }
 };

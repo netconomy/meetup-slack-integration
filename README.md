@@ -18,7 +18,6 @@ The config options are the following:
     "daysAhead": [1, 4] // days till the event starts. Supports multiple reminders (e.g. 1 day ahead and 4 days ahead).
   },
   "meetup": {
-    "baseurl": "https://api.meetup.com", // no need to change, excpect for test cases
     "group": "", // the name of your group (as displayed in the URL)
     "apikey": "" // the api key needs to be retrieved from https://secure.meetup.com/meetup_api/key/
   },

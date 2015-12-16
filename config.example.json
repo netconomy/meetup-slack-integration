@@ -3,7 +3,6 @@
     "daysAhead": [1, 4]
   },
   "meetup": {
-    "baseurl": "https://api.meetup.com",
     "group": "",
     "apikey": ""
   },
@@ -11,6 +10,6 @@
     "webhook": "",
     "channel": "",
     "username": "",
-    "icon_url": ""
+    "iconUrl": ""
   }
 }
