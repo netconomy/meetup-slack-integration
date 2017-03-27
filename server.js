@@ -31,6 +31,7 @@ meetup.getUpcomingEvents(config.meetup.apikey, config.meetup.group)
             });
 
         return Promise.all(requests);
-    }).catch((error) => {
+    }, (error) => {
         console.log(error);
+        process.exit(1);
     });
