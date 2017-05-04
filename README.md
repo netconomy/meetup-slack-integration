@@ -31,8 +31,8 @@ The config options are the following:
 ```
 
 ## Run
-You can run the reminder with `npm run start -- -config=config.json`. The parameter -config should point to your
-provided config file.
+You can run the reminder with `npm run start -- --config config.json`. The
+parameter -config should point to your provided config file.
 
 The messages will be posted to Slack immediatly, if reminders apply.
 The integration is designed to run as a cronjob once per day, at the desired time the messages should be posted.

@@ -1,18 +1,20 @@
 "use strict";
 
 const moment = require('moment');
+const fs = require('fs');
+const argv = require('yargs').option({
+    config: {
+        type: 'string',
+        demand: true,
+        description: 'Path to a configuration file'
+    }
+}).argv;
 
-const helper = require('./utils/helper');
 const meetup = require('./utils/meetup');
 const slack = require('./utils/slack');
 const reminder = require('./utils/reminder');
 
-const args = helper.getProcessArguments();
-if (!args['config']) {
-    console.error('Please provide a config file via the "config" argument');
-    process.exit(1);
-}
-const config = require(`./${args['config']}`);
+const config = JSON.parse(fs.readFileSync(argv.config));
 
 meetup.getUpcomingEvents(config.meetup.apikey, config.meetup.group)
     .then((data) => {
