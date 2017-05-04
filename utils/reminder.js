@@ -1,6 +1,6 @@
 "use strict";
 
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 module.exports = {
     active(reminders, event) {
@@ -18,7 +18,8 @@ module.exports = {
 
     createReminder(data) {
         const duration = moment.duration(data.activeReminder, 'd');
-        const date = moment(data.event.time);
+        const date = moment.tz(data.event.time, 'UTC');
+        date.add(data.event.utc_offset, 'milliseconds');
 
         return `<!channel> Reminder:\n` +
             `"${data.event.name}" is taking place in ${duration.humanize()}\n` +
