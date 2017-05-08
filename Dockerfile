@@ -6,5 +6,5 @@ COPY package.json yarn.lock /app/
 RUN cd /app && yarn
 COPY server.js /app/
 COPY utils/* /app/utils/
-CMD ["--config config.json"]
+CMD ["--config=/app/config.json"]
 ENTRYPOINT ["node", "/app/server.js"]
